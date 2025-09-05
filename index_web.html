@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Recipes</title>
+  <meta name="description" content="A modern responsive cooking website with recipes, blogs, and tips."/>
+  <link rel="stylesheet" href="style.web.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">🍴 Delicious Recipes</h1>
+      <button id="toggleTheme" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="burger" id="burger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <div class="overlay" id="overlay"></div>
+        <ul class="nav-links" id="nav-links">
+          <li class="close-icon" id="closeNav"><i class="fas fa-times"></i></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="recipe.html">Recipes</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Contact_Page.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h2>Cook Like a Pro</h2>
+      <p>Discover easy and delicious recipes curated by top chefs.</p>
+      <a href="#" class="btn1">Explore Recipes</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="recipes fade-in">
+      <div class="search-bar-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes"/>
+      </div>
+      <h3>Click any recipe to see full details</h3>
+      <div class="cards-container" id="recipeGrid" aria-label="Recipe cards"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="recipeModal" role="dialog" aria-modal="true" tabindex="-1">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <h3 id="modalTitle">Recipe Title</h3>
+      <p id="modalText">Recipe description...</p>
+      <div id="modalVideoWrapper" style="margin-top:1rem; display:none;">
+        <iframe id="modalVideo" width="100%" height="315" frameborder="0" allowfullscreen style="border-radius: 10px;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta fade-in">
+    <h3>Subscribe for Weekly Recipes</h3>
+    <form id="subscribeForm" class="subscribe-form" novalidate>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+    <p id="formMsg"></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.web.js"></script>
+</body>
+</html>
